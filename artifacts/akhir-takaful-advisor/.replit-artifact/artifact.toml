@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Akhir Takaful Advisor AIA"
+description = "A premium Malaysian Takaful advisory website for Muhammad Akhir, focused on clear education, personalised protection planning, and respectful consultation pathways."
+version = "1.0.0"
+id = "artifacts/akhir-takaful-advisor"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25050
+
+[services.development]
+run = "pnpm --filter @workspace/akhir-takaful-advisor run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/akhir-takaful-advisor", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/akhir-takaful-advisor/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25050"
+BASE_PATH = "/"
