@@ -3,6 +3,8 @@ import { type ReactNode, useEffect } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import { ErrorBoundary } from '@/components/error-boundary';
+import { SEO } from '@/components/SEO';
+import { useSiteConfig } from '@/lib/useSiteConfig';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 
@@ -47,8 +49,34 @@ function ScrollToTop() {
 }
 
 function Router() {
+  const [location] = useLocation();
+  const config = useSiteConfig();
+
+  const pageSEO = {
+    "/": config.pages.home,
+    "/solutions": config.pages.solutions,
+    "/solutions/medical-card": config.pages.medicalCard,
+    "/solutions/hibah-family-protection": config.pages.hibahFamilyProtection,
+    "/solutions/critical-illness": config.pages.criticalIllness,
+    "/solutions/protection-planning": config.pages.protectionPlanning,
+    "/about": config.pages.about,
+    "/how-it-works": config.pages.howItWorks,
+    "/resources": config.pages.resources,
+    "/join-akhir": config.pages.joinAkhir,
+    "/contact": config.pages.contact,
+  }[location];
+
   return (
     <Shell>
+      <SEO
+        seo={
+          pageSEO ?? {
+            title: config.seo.defaultTitle,
+            description: config.seo.defaultDescription,
+            keywords: config.seo.defaultKeywords,
+          }
+        }
+      />
       <ScrollToTop />
 
       <RoutedErrorBoundary>

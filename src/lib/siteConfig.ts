@@ -100,6 +100,10 @@ export type SiteConfig = {
   pages: {
     home: PageSEO
     solutions: PageSEO
+    medicalCard: PageSEO
+    hibahFamilyProtection: PageSEO
+    criticalIllness: PageSEO
+    protectionPlanning: PageSEO
     about: PageSEO
     howItWorks: PageSEO
     resources: PageSEO
@@ -208,6 +212,38 @@ export const defaultSiteConfig: SiteConfig = {
         "Explore practical Takaful solutions for medical, family protection, critical illness and financial planning.",
       keywords:
         "Takaful solutions, Medical Card, Hibah, Critical Illness",
+    },
+
+    medicalCard: {
+      title: "Medical Card Malaysia | Akhir Takaful",
+      description:
+        "Understand medical card coverage, limits, co-takaful, exclusions and waiting periods before you need them.",
+      keywords:
+        "Medical Card Malaysia, Medical Takaful, Hospitalisation, Medical Protection",
+    },
+
+    hibahFamilyProtection: {
+      title: "Hibah & Family Protection Malaysia | Akhir Takaful",
+      description:
+        "Understand how hibah can form part of a wider protection plan for the people who depend on you.",
+      keywords:
+        "Hibah Malaysia, Family Protection, Takaful Hibah, Financial Protection",
+    },
+
+    criticalIllness: {
+      title: "Critical Illness Protection Malaysia | Akhir Takaful",
+      description:
+        "Understand how critical illness protection can provide financial support when a covered illness is diagnosed.",
+      keywords:
+        "Critical Illness Malaysia, Critical Illness Protection, Takaful, Financial Protection",
+    },
+
+    protectionPlanning: {
+      title: "Protection Planning Malaysia | Akhir Takaful",
+      description:
+        "Review your existing protection, identify potential gaps and make sure your plan still fits your life.",
+      keywords:
+        "Protection Planning Malaysia, Takaful Planning, Financial Protection, Takaful Review",
     },
 
     about: {
