@@ -1345,7 +1345,7 @@ export default function Admin() {
   }
 
   return (
-    <div className="min-h-screen bg-[#f7f5ef] flex">
+    <div className="min-h-screen bg-background flex">
       <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}

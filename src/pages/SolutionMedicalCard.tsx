@@ -2,11 +2,13 @@ import { ArrowRight, Check, MessageCircle, ShieldCheck } from "lucide-react"
 import { Link } from "wouter"
 import { Button } from "@/components/ui/button"
 import { medicalCardContent } from "@/content/medicalCard"
-
 import { contactLinks } from "@/lib/contactLinks"
+import medCardImage from "@/assets/medcard.jpeg"
+
 export default function SolutionMedicalCard() {
   return (
     <div className="animate-in fade-in duration-700">
+
       {/* Hero */}
       <section className="bg-secondary/30 py-16 md:py-24 border-b border-border/50">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
@@ -14,7 +16,7 @@ export default function SolutionMedicalCard() {
             {medicalCardContent.hero.eyebrow}
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif text-balance">
+          <h1 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-6xl">
             {medicalCardContent.hero.heading}
           </h1>
 
@@ -24,8 +26,21 @@ export default function SolutionMedicalCard() {
         </div>
       </section>
 
+      {/* Editorial image */}
+      <section className="pt-10 pb-6 md:pt-14 md:pb-8">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="overflow-hidden rounded-[2rem]">
+            <img
+              src={medCardImage}
+              alt="A calm family moment representing the importance of medical protection"
+              className="h-[320px] w-full object-cover md:h-[500px]"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Problem */}
-      <section className="py-20 md:py-28">
+      <section className="pt-8 pb-20 md:pt-10 md:pb-28">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="space-y-5">
@@ -33,7 +48,7 @@ export default function SolutionMedicalCard() {
                 {medicalCardContent.problem.eyebrow}
               </p>
 
-              <h2 className="text-3xl md:text-4xl font-serif text-balance">
+              <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
                 {medicalCardContent.problem.heading}
               </h2>
             </div>
@@ -53,7 +68,7 @@ export default function SolutionMedicalCard() {
               {medicalCardContent.benefits.eyebrow}
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-balance">
+            <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
               {medicalCardContent.benefits.heading}
             </h2>
           </div>
@@ -62,7 +77,7 @@ export default function SolutionMedicalCard() {
             {medicalCardContent.benefits.items.map((item) => (
               <div
                 key={item.title}
-                className="bg-white border border-border rounded-3xl p-7 space-y-5"
+                className="bg-card border border-border rounded-3xl p-7 space-y-5"
               >
                 <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
                   <ShieldCheck className="w-6 h-6" />
@@ -90,7 +105,7 @@ export default function SolutionMedicalCard() {
                 {medicalCardContent.considerations.eyebrow}
               </p>
 
-              <h2 className="text-3xl md:text-4xl font-serif text-balance">
+              <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
                 {medicalCardContent.considerations.heading}
               </h2>
             </div>
@@ -131,24 +146,28 @@ export default function SolutionMedicalCard() {
               {medicalCardContent.misconceptions.eyebrow}
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-balance">
+            <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
               {medicalCardContent.misconceptions.heading}
             </h2>
           </div>
 
-          <div className="space-y-4">
-            {medicalCardContent.misconceptions.items.map((item) => (
+          <div className="border-t border-border/70">
+            {medicalCardContent.misconceptions.items.map((item, index) => (
               <div
                 key={item.question}
-                className="bg-white border border-border rounded-2xl p-6 md:p-7"
+                className="grid gap-4 border-b border-border/70 py-8 md:grid-cols-[80px_1fr] md:gap-10 md:py-10"
               >
-                <h3 className="text-lg font-serif font-medium mb-3">
-                  {item.question}
-                </h3>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.answer}
+                <p className="font-serif text-2xl text-brand-oxblood/60">
+                  0{index + 1}
                 </p>
+                <div className="space-y-3">
+                  <h3 className="text-xl font-serif font-medium">
+                    {item.question}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {item.answer}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -156,17 +175,17 @@ export default function SolutionMedicalCard() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="bg-secondary/50 py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-7">
-          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary-foreground/70">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-foreground/70">
             {medicalCardContent.cta.eyebrow}
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-serif text-balance">
+          <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
             {medicalCardContent.cta.heading}
           </h2>
 
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {medicalCardContent.cta.body}
           </p>
 
@@ -174,7 +193,6 @@ export default function SolutionMedicalCard() {
             <Button
               asChild
               size="lg"
-              variant="secondary"
               className="rounded-full gap-2 px-8"
             >
               <a href={contactLinks.calendly}>
@@ -187,7 +205,7 @@ export default function SolutionMedicalCard() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full gap-2 px-8 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="rounded-full gap-2 px-8 bg-brand-ivory"
             >
               <a href={contactLinks.whatsapp}>
                 <MessageCircle className="w-5 h-5" />
@@ -199,13 +217,14 @@ export default function SolutionMedicalCard() {
           <div className="pt-4">
             <Link
               href="/solutions"
-              className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               ← Back to all solutions
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   )
 }

@@ -2,7 +2,6 @@ import {
   ArrowRight,
   CheckCircle2,
   MessageCircle,
-  ShieldCheck,
 } from "lucide-react"
 import { contactLinks } from "@/lib/contactLinks"
 import { Button } from "@/components/ui/button"
@@ -32,34 +31,26 @@ export default function HowItWorks() {
 
       {/* Steps */}
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="border-t border-border/70">
             {steps.map((step) => (
               <article
                 key={step.number}
-                className="rounded-3xl border border-border bg-background p-7 md:p-8"
+                className="grid gap-5 border-b border-border/70 py-8 md:grid-cols-[100px_1fr] md:gap-10 md:py-10"
               >
-                <div className="mb-8 flex items-center justify-between">
-                  <span className="font-serif text-4xl text-muted-foreground/40">
-                    {step.number}
-                  </span>
-
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary">
-                    {step.number === "06" ? (
-                      <CheckCircle2 className="h-5 w-5" />
-                    ) : (
-                      <ArrowRight className="h-5 w-5" />
-                    )}
-                  </div>
-                </div>
-
-                <h2 className="font-serif text-2xl font-medium tracking-tight">
-                  {step.title}
-                </h2>
-
-                <p className="mt-4 leading-relaxed text-muted-foreground">
-                  {step.description}
+                <p className="font-serif text-3xl text-brand-oxblood/60 md:text-4xl">
+                  {step.number}
                 </p>
+
+                <div className="max-w-3xl space-y-3">
+                  <h2 className="font-serif text-2xl font-medium tracking-tight md:text-3xl">
+                    {step.title}
+                  </h2>
+
+                  <p className="leading-relaxed text-muted-foreground md:text-lg">
+                    {step.description}
+                  </p>
+                </div>
               </article>
             ))}
           </div>
@@ -67,30 +58,27 @@ export default function HowItWorks() {
       </section>
 
       {/* Reassurance */}
-      <section className="border-y border-border/50 bg-secondary/30 py-16 md:py-20">
+      <section className="bg-secondary/30 py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-background">
-            <ShieldCheck className="h-6 w-6" />
+          <div className="border-t border-border/70 pt-10 md:pt-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+              {note.eyebrow}
+            </p>
+
+            <h2 className="mx-auto mt-5 max-w-3xl font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
+              {note.heading}
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              {note.body}
+            </p>
           </div>
-
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-primary">
-            {note.eyebrow}
-          </p>
-
-          <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
-            {note.heading}
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            {note.body}
-          </p>
         </div>
       </section>
-
       {/* CTA */}
-      <section className="bg-primary py-16 text-primary-foreground md:py-24">
+      <section className="bg-secondary/50 py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-foreground/70">
             {cta.eyebrow}
           </p>
 
@@ -98,15 +86,14 @@ export default function HowItWorks() {
             {cta.heading}
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {cta.body}
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-3">
             <Button
               asChild
               size="lg"
-              variant="secondary"
               className="rounded-full px-7"
             >
               <a href={contactLinks.calendly}>
@@ -118,7 +105,7 @@ export default function HowItWorks() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-primary-foreground/30 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="rounded-full gap-2 px-8 bg-brand-ivory"
             >
               <a href={contactLinks.whatsapp}>
                 <MessageCircle className="mr-2 h-4 w-4" />
@@ -127,7 +114,7 @@ export default function HowItWorks() {
             </Button>
           </div>
 
-          <p className="mt-8 text-sm text-primary-foreground/50">
+          <p className="pt-4 text-sm text-foreground/70">
             Explore our protection solutions below.
           </p>
         </div>

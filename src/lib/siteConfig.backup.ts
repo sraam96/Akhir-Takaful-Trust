@@ -151,9 +151,9 @@ export const defaultSiteConfig: SiteConfig = {
   },
 
   brand: {
-    primaryColor: "#19483D",
-    accentColor: "#B08D57",
-    backgroundColor: "#F8F6F0",
+    primaryColor: "#4B5841",
+    accentColor: "#8A5145",
+    backgroundColor: "#F5F1E8",
     headingFont: "Playfair Display",
     bodyFont: "Plus Jakarta Sans",
     buttonRadius: "0.375rem",

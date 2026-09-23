@@ -49,7 +49,7 @@ export default function Resources() {
               {featured.eyebrow}
             </p>
 
-            <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
+            <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
               {featured.heading}
             </h2>
 
@@ -99,7 +99,7 @@ export default function Resources() {
               {topics.eyebrow}
             </p>
 
-            <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
+            <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
               {topics.heading}
             </h2>
           </div>
@@ -143,7 +143,7 @@ export default function Resources() {
             {disclaimer.eyebrow}
           </p>
 
-          <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
+          <h2 className="font-serif text-4xl font-medium tracking-tight md:text-5xl">
             {disclaimer.heading}
           </h2>
 
@@ -154,9 +154,9 @@ export default function Resources() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary py-16 text-primary-foreground md:py-24">
+      <section className="bg-secondary/50 py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-primary-foreground/70">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-foreground/70">
             {cta.eyebrow}
           </p>
 
@@ -164,15 +164,14 @@ export default function Resources() {
             {cta.heading}
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {cta.body}
           </p>
 
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 pt-3">
             <Button
               asChild
               size="lg"
-              variant="secondary"
               className="rounded-full px-7"
             >
               <a href={contactLinks.calendly}>
@@ -184,7 +183,7 @@ export default function Resources() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-primary-foreground/30 bg-transparent px-7 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="rounded-full gap-2 px-8 bg-brand-ivory"
             >
               <a href="/solutions">
                 {cta.secondaryCta}

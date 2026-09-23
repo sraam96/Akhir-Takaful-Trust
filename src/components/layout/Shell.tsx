@@ -6,10 +6,13 @@ export function Shell({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-[100dvh] flex flex-col bg-background selection:bg-primary/20 selection:text-foreground">
       <Navbar />
-      <main className="flex-1">
+
+      <main className="flex-1 pt-[100px]">
         {children}
       </main>
+
       <Footer />
     </div>
   )
 }
+

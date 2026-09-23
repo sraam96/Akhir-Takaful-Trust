@@ -1,9 +1,15 @@
-import { ArrowRight, Check, MessageCircle, ShieldCheck } from "lucide-react"
+import { ArrowRight, Check, MessageCircle } from "lucide-react"
+
 import { Link } from "wouter"
+
 import { Button } from "@/components/ui/button"
+
 import { protectionPlanningContent } from "@/content/protectionPlanning"
 
 import { contactLinks } from "@/lib/contactLinks"
+
+import protectionPlanningImage from "@/assets/protectionplanning.jpeg"
+
 export default function SolutionProtectionPlanning() {
   return (
     <div className="animate-in fade-in duration-700">
@@ -14,7 +20,7 @@ export default function SolutionProtectionPlanning() {
             {protectionPlanningContent.hero.eyebrow}
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif text-balance">
+          <h1 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-6xl">
             {protectionPlanningContent.hero.heading}
           </h1>
 
@@ -24,8 +30,21 @@ export default function SolutionProtectionPlanning() {
         </div>
       </section>
 
+      {/* Editorial image */}
+      <section className="pt-10 pb-6 md:pt-14 md:pb-8">
+        <div className="container mx-auto max-w-6xl px-4">
+          <div className="overflow-hidden rounded-[2rem]">
+            <img
+              src={protectionPlanningImage}
+              alt="A professional reviewing his financial plans at home"
+              className="h-[320px] w-full object-cover md:h-[500px]"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Problem */}
-      <section className="py-20 md:py-28">
+      <section className="pt-8 pb-20 md:pt-10 md:pb-28">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-start">
             <div className="space-y-5">
@@ -33,7 +52,7 @@ export default function SolutionProtectionPlanning() {
                 {protectionPlanningContent.problem.eyebrow}
               </p>
 
-              <h2 className="text-3xl md:text-4xl font-serif text-balance">
+              <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
                 {protectionPlanningContent.problem.heading}
               </h2>
             </div>
@@ -53,35 +72,36 @@ export default function SolutionProtectionPlanning() {
               {protectionPlanningContent.review.eyebrow}
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-balance">
+            <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
               {protectionPlanningContent.review.heading}
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {protectionPlanningContent.review.items.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white border border-border rounded-3xl p-7 space-y-5"
-              >
-                <div className="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6" />
+          <div className="border-t border-border/70">
+            <div className="grid md:grid-cols-2">
+              {protectionPlanningContent.review.items.map((item, index) => (
+                <div
+                  key={item.title}
+                  className="border-b border-border/70 py-8 md:border-r md:px-8 md:py-10 first:md:pl-0 last:md:border-r-0"
+                >
+                  <div className="space-y-5">
+                    <p className="font-serif text-2xl text-brand-oxblood/60">
+                      0{index + 1}
+                    </p>
+                    <h3 className="text-xl font-serif font-medium">
+                      {item.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-
-                <h3 className="text-xl font-serif font-medium">
-                  {item.title}
-                </h3>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+              ))}
+            </div>
+          </div>        </div>
       </section>
 
-      {/* Review Triggers */}
+      {/* Triggers */}
       <section className="py-20 md:py-28">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-12 md:gap-20">
@@ -90,7 +110,7 @@ export default function SolutionProtectionPlanning() {
                 {protectionPlanningContent.triggers.eyebrow}
               </p>
 
-              <h2 className="text-3xl md:text-4xl font-serif text-balance">
+              <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
                 {protectionPlanningContent.triggers.heading}
               </h2>
             </div>
@@ -131,7 +151,7 @@ export default function SolutionProtectionPlanning() {
               {protectionPlanningContent.misconceptions.eyebrow}
             </p>
 
-            <h2 className="text-3xl md:text-4xl font-serif text-balance">
+            <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
               {protectionPlanningContent.misconceptions.heading}
             </h2>
           </div>
@@ -140,7 +160,7 @@ export default function SolutionProtectionPlanning() {
             {protectionPlanningContent.misconceptions.items.map((item) => (
               <div
                 key={item.question}
-                className="bg-white border border-border rounded-2xl p-6 md:p-7"
+                className="bg-card border border-border rounded-2xl p-6 md:p-7"
               >
                 <h3 className="text-lg font-serif font-medium mb-3">
                   {item.question}
@@ -156,17 +176,17 @@ export default function SolutionProtectionPlanning() {
       </section>
 
       {/* CTA */}
-      <section className="bg-primary text-primary-foreground py-20">
+      <section className="bg-secondary/50 py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-7">
-          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary-foreground/70">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-foreground/70">
             {protectionPlanningContent.cta.eyebrow}
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-serif text-balance">
+          <h2 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-5xl">
             {protectionPlanningContent.cta.heading}
           </h2>
 
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {protectionPlanningContent.cta.body}
           </p>
 
@@ -174,7 +194,6 @@ export default function SolutionProtectionPlanning() {
             <Button
               asChild
               size="lg"
-              variant="secondary"
               className="rounded-full gap-2 px-8"
             >
               <a href={contactLinks.calendly}>
@@ -187,7 +206,7 @@ export default function SolutionProtectionPlanning() {
               asChild
               size="lg"
               variant="outline"
-              className="rounded-full gap-2 px-8 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              className="rounded-full gap-2 px-8 bg-brand-ivory"
             >
               <a href={contactLinks.whatsapp}>
                 <MessageCircle className="w-5 h-5" />
@@ -199,7 +218,7 @@ export default function SolutionProtectionPlanning() {
           <div className="pt-4">
             <Link
               href="/solutions"
-              className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+              className="text-sm text-foreground/70 hover:text-foreground transition-colors"
             >
               ← Back to all solutions
             </Link>

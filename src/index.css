@@ -43,6 +43,18 @@
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-destructive-border: var(--destructive-border);
+  --color-brand-background: hsl(var(--brand-background));
+  --color-brand-foreground: hsl(var(--brand-foreground));
+  --color-brand-primary: hsl(var(--brand-primary));
+  --color-brand-secondary: hsl(var(--brand-secondary));
+  --color-brand-accent: hsl(var(--brand-accent));
+  --color-brand-muted-foreground: hsl(var(--brand-muted-foreground));
+  --color-brand-border: hsl(var(--brand-border));
+  --color-brand-card: hsl(var(--brand-card));
+  --color-brand-dark: hsl(var(--brand-dark));
+  --color-brand-olive: hsl(var(--brand-olive));
+  --color-brand-oxblood: hsl(var(--brand-oxblood));
+  --color-brand-ivory: hsl(var(--brand-ivory));
 
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
@@ -60,42 +72,52 @@
 |--------------------------------------------------------------------------
 | AKHIR BRAND SYSTEM
 |--------------------------------------------------------------------------
-| These are the master design controls.
+| Master design controls.
 |
-| The future Control Center will be able to change these values without
-| having to edit individual pages.
+| Core palette:
+|   #252A22  Deep olive charcoal
+|   #4B5841  Olive
+|   #4B5841  Moss
+|   #718166  Logo green
+|   #5C0B03  Oxblood
+|   #F5F1E8  Warm ivory
 |--------------------------------------------------------------------------
 */
 
 :root {
 
   /* =========================
-     BRAND COLOURS
+     BRAND PALETTE
      ========================= */
 
-  /* Main website background */
-  --brand-background: 45 25% 97%;
+  /* Warm ivory — main page background */
+  --brand-background: 40 33% 94%;
 
-  /* Main text / dark sections */
-  --brand-foreground: 162 20% 14%;
+  /* Deep olive charcoal — main text / dark sections */
+  --brand-foreground: 92 12% 15%;
 
-  /* Main brand colour */
-  --brand-primary: 162 47% 21%;
+  /* Olive — primary brand colour */
+  --brand-primary: 92 12% 15%;
 
-  /* Secondary surfaces */
-  --brand-secondary: 45 20% 92%;
+  /* Moss — secondary brand colour */
+  --brand-secondary: 100 15% 32%;
+  --brand-accent: 10 34% 41%;
 
-  /* Supporting accent */
-  --brand-accent: 162 47% 21%;
 
   /* Muted text */
-  --brand-muted-foreground: 215 15% 45%;
+  --brand-muted-foreground: 90 7% 38%;
 
   /* Borders */
-  --brand-border: 45 15% 90%;
+  --brand-border: 40 16% 84%;
 
-  /* Cards */
-  --brand-card: 0 0% 100%;
+  /* Cards — slightly lighter than the ivory background */
+  --brand-card: 40 30% 97%;
+
+  /* Explicit palette tokens for future components */
+  --brand-dark: 92 12% 15%;
+  --brand-olive: 100 15% 32%;
+  --brand-oxblood: 5 94% 19%;
+  --brand-ivory: 40 33% 94%;
 
   /* =========================
      TYPOGRAPHY
@@ -145,18 +167,16 @@
   --popover-border: var(--brand-border);
 
   --primary: var(--brand-primary);
-  --primary-foreground: var(--brand-background);
+  --primary-foreground: var(--brand-ivory);
 
   --secondary: var(--brand-secondary);
-  --secondary-foreground: var(--brand-foreground);
+  --secondary-foreground: var(--brand-ivory);
 
   --muted: var(--brand-secondary);
   --muted-foreground: var(--brand-muted-foreground);
 
-  --accent: var(--brand-accent);
-  --accent-foreground: var(--brand-background);
 
-  --destructive: 0 70% 45%;
+  --destructive: 5 70% 35%;
   --destructive-foreground: 0 0% 100%;
 
   /* =========================
@@ -168,10 +188,10 @@
   --sidebar-border: var(--brand-border);
 
   --sidebar-primary: var(--brand-primary);
-  --sidebar-primary-foreground: var(--brand-background);
+  --sidebar-primary-foreground: var(--brand-ivory);
 
   --sidebar-accent: var(--brand-secondary);
-  --sidebar-accent-foreground: var(--brand-foreground);
+  --sidebar-accent-foreground: var(--brand-ivory);
 
   --sidebar-ring: var(--brand-primary);
 
@@ -181,13 +201,13 @@
 
   --opaque-button-border-intensity: -8;
 
-  --button-outline: rgba(0, 0, 0, 0.1);
+  --button-outline: rgba(46, 51, 39, 0.12);
 
-  --badge-outline: rgba(0, 0, 0, 0.05);
+  --badge-outline: rgba(46, 51, 39, 0.06);
 
-  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-1: rgba(46, 51, 39, 0.03);
 
-  --elevate-2: rgba(0, 0, 0, 0.08);
+  --elevate-2: rgba(46, 51, 39, 0.08);
 
   --sidebar-primary-border:
     hsl(
@@ -240,53 +260,53 @@
 
 .dark {
 
-  --background: 162 20% 11%;
-  --foreground: 45 20% 95%;
+  --background: 85 13% 18%;
+  --foreground: 44 39% 92%;
 
-  --border: 215 20% 20%;
-  --input: 215 20% 20%;
-  --ring: 162 40% 40%;
+  --border: 87 12% 28%;
+  --input: 87 12% 28%;
+  --ring: 48 70% 75%;
 
-  --card: 215 30% 14%;
-  --card-foreground: 45 20% 95%;
-  --card-border: 215 20% 22%;
+  --card: 85 12% 22%;
+  --card-foreground: 44 39% 92%;
+  --card-border: 87 12% 28%;
 
-  --popover: 215 30% 14%;
-  --popover-foreground: 45 20% 95%;
-  --popover-border: 215 20% 22%;
+  --popover: 85 12% 22%;
+  --popover-foreground: 44 39% 92%;
+  --popover-border: 87 12% 28%;
 
-  --primary: 162 40% 45%;
-  --primary-foreground: 162 20% 10%;
+  --primary: 87 23% 38%;
+  --primary-foreground: 44 39% 92%;
 
-  --secondary: 215 20% 20%;
-  --secondary-foreground: 45 20% 95%;
+  --secondary: 76 35% 30%;
+  --secondary-foreground: 44 39% 92%;
 
-  --muted: 215 20% 20%;
-  --muted-foreground: 215 15% 65%;
+  --muted: 85 12% 25%;
+  --muted-foreground: 47 20% 72%;
 
-  --accent: 162 40% 45%;
-  --accent-foreground: 215 30% 10%;
+  --accent: 48 70% 75%;
+  --accent-foreground: 85 13% 18%;
 
-  --destructive: 0 65% 55%;
+  --destructive: 5 70% 45%;
   --destructive-foreground: 0 0% 100%;
 
-  --sidebar: 215 30% 12%;
-  --sidebar-foreground: 45 20% 95%;
-  --sidebar-border: 215 20% 20%;
+  --sidebar: 85 13% 15%;
+  --sidebar-foreground: 44 39% 92%;
+  --sidebar-border: 87 12% 25%;
 
-  --sidebar-primary: 162 40% 45%;
-  --sidebar-primary-foreground: 215 30% 10%;
+  --sidebar-primary: 87 23% 38%;
+  --sidebar-primary-foreground: 44 39% 92%;
 
-  --sidebar-accent: 215 20% 20%;
-  --sidebar-accent-foreground: 45 20% 95%;
+  --sidebar-accent: 76 35% 30%;
+  --sidebar-accent-foreground: 44 39% 92%;
 
-  --sidebar-ring: 162 40% 45%;
+  --sidebar-ring: 48 70% 75%;
 
-  --button-outline: rgba(255, 255, 255, 0.1);
-  --badge-outline: rgba(255, 255, 255, 0.05);
+  --button-outline: rgba(243, 239, 228, 0.12);
+  --badge-outline: rgba(243, 239, 228, 0.06);
 
-  --elevate-1: rgba(255, 255, 255, 0.04);
-  --elevate-2: rgba(255, 255, 255, 0.09);
+  --elevate-1: rgba(243, 239, 228, 0.04);
+  --elevate-2: rgba(243, 239, 228, 0.09);
 
   --opaque-button-border-intensity: 9;
 }
@@ -347,10 +367,6 @@
     text-wrap: pretty;
   }
 
-  /*
-   * Useful when we start allowing Control Center
-   * sections to use the master brand colour.
-   */
   .brand-bg {
     background-color: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -362,5 +378,22 @@
 
   .brand-border {
     border-color: hsl(var(--primary));
+  }
+
+  .brand-dark {
+    background-color: hsl(var(--brand-dark));
+    color: hsl(var(--brand-ivory));
+  }
+
+
+
+  .brand-oxblood {
+    background-color: hsl(var(--brand-oxblood));
+    color: hsl(var(--brand-ivory));
+  }
+
+  .brand-ivory {
+    background-color: hsl(var(--brand-ivory));
+    color: hsl(var(--brand-dark));
   }
 }

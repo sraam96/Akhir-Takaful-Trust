@@ -9,8 +9,8 @@ export const siteConfig = {
   },
 
   brand: {
-    primaryColor: "#163C32",
-    secondaryColor: "#F5F2EA",
+    primaryColor: "#4B5841",
+    secondaryColor: "#F5F1E8",
     headingFont: "serif",
     bodyFont: "sans-serif",
   },

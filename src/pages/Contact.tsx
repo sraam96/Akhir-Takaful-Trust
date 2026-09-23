@@ -7,7 +7,7 @@ export default function Contact() {
     <div className="animate-in fade-in duration-700">
       <div className="bg-secondary/30 py-16 md:py-24 border-b border-border/50">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-serif text-balance">Get in Touch</h1>
+          <h1 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-6xl">Get in Touch</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             Whether you have a quick question or want a full portfolio review, I'm here to help.
           </p>
@@ -17,11 +17,11 @@ export default function Contact() {
       <div className="container mx-auto max-w-5xl px-4 py-20">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           
-          <div className="bg-white border border-border p-8 md:p-10 rounded-3xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-card border border-border p-8 md:p-10 rounded-3xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 rounded-full bg-[#25D366]/10 text-[#25D366] flex items-center justify-center mb-6">
               <MessageCircle className="w-8 h-8" />
             </div>
-            <h2 className="text-2xl font-serif font-medium mb-4">Quick Chat via WhatsApp</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium tracking-tight mb-4">Quick Chat via WhatsApp</h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Have a quick question about coverage or want to say hello? WhatsApp is the fastest way to reach me directly.
             </p>
@@ -33,11 +33,11 @@ export default function Contact() {
             <p className="text-xs text-muted-foreground mt-4">Average response time: Few hours</p>
           </div>
 
-          <div className="bg-white border border-border p-8 md:p-10 rounded-3xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+          <div className="bg-card border border-border p-8 md:p-10 rounded-3xl flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
             <div className="w-16 h-16 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-6">
               <Calendar className="w-8 h-8" />
             </div>
-            <h2 className="text-2xl font-serif font-medium mb-4">Book a Consultation</h2>
+            <h2 className="text-3xl md:text-4xl font-serif font-medium tracking-tight mb-4">Book a Consultation</h2>
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Prefer a dedicated time to talk? Schedule a 30-minute virtual or coffee meeting at a time that suits you.
             </p>

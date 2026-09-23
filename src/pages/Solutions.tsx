@@ -15,7 +15,7 @@ export default function Solutions() {
             {solutionsContent.hero.eyebrow}
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-serif text-balance">
+          <h1 className="font-serif text-4xl font-medium tracking-tight text-balance md:text-6xl">
             {solutionsContent.hero.heading}
           </h1>
 
@@ -43,9 +43,9 @@ export default function Solutions() {
         })}
       </div>
 
-      <div className="bg-primary text-primary-foreground py-20">
+      <div className="bg-secondary/50 py-20 md:py-28">
         <div className="container mx-auto max-w-4xl px-4 text-center space-y-8">
-          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary-foreground/70">
+          <p className="text-xs font-semibold tracking-[0.18em] uppercase text-foreground/70">
             {solutionsContent.cta.eyebrow}
           </p>
 
@@ -53,15 +53,14 @@ export default function Solutions() {
             {solutionsContent.cta.heading}
           </h2>
 
-          <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {solutionsContent.cta.body}
           </p>
 
           <Button
             asChild
             size="lg"
-            variant="secondary"
-            className="rounded-full mt-4"
+            className="rounded-full gap-2 px-8"
           >
             <a href={contactLinks.calendly}>
               {solutionsContent.cta.primaryCta}
@@ -89,17 +88,20 @@ function SolutionCard({
   points: readonly string[]
 }) {
   return (
-    <div className="flex flex-col md:flex-row gap-8 bg-white border border-border p-8 rounded-3xl transition-shadow hover:shadow-lg">
-      <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-        {icon}
+    <div className="group grid gap-8 border-t border-border py-10 md:grid-cols-[56px_1fr_auto] md:items-center md:gap-10 md:py-14">
+      <div className="font-serif text-3xl text-brand-oxblood/60 md:text-4xl">
+        {title === "Medical Card" && "01"}
+        {title === "Hibah & Family Protection" && "02"}
+        {title === "Critical Illness" && "03"}
+        {title === "Protection Planning Review" && "04"}
       </div>
 
       <div className="flex-1 space-y-4">
-        <p className="text-xs font-semibold tracking-[0.18em] uppercase text-primary">
+        <p className="text-xs font-semibold tracking-[0.18em] uppercase text-brand-oxblood">
           {title}
         </p>
 
-        <h2 className="text-2xl font-serif font-medium">
+        <h2 className="font-serif text-3xl font-medium tracking-tight md:text-4xl">
           {heading}
         </h2>
 
@@ -120,11 +122,11 @@ function SolutionCard({
         </ul>
       </div>
 
-      <div className="md:w-48 flex items-center md:justify-end mt-4 md:mt-0 border-t md:border-t-0 md:border-l border-border/50 pt-6 md:pt-0 md:pl-8">
+      <div className="flex items-center md:justify-end">
         <Button
           asChild
           variant="ghost"
-          className="group w-full md:w-auto justify-between md:justify-center text-primary hover:text-primary"
+          className="group w-full justify-between md:w-auto md:justify-center text-brand-oxblood hover:text-brand-oxblood"
         >
           <Link href={href}>
             Learn more
