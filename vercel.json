@@ -1,1 +1,1 @@
-{"buildCommand": "PORT=3000 npm run build", "outputDirectory": "dist/public", "installCommand": "pnpm install --no-frozen-lockfile", "rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}
+{"buildCommand": "PORT=3000 BASE_PATH=/ npm run build", "outputDirectory": "dist/public", "installCommand": "pnpm install --no-frozen-lockfile", "rewrites": [{"source": "/(.*)", "destination": "/index.html"}]}
