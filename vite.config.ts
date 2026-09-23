@@ -3,10 +3,6 @@ import react from "@vitejs/plugin-react"
 import tailwindcss from "@tailwindcss/vite"
 import { defineConfig } from "vite"
 
-// Ensure PORT exists for static builds
-process.env.PORT = process.env.PORT || "3000";
-
-
 export default defineConfig({
   base: "/",
 
