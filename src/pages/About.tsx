@@ -50,7 +50,7 @@ export default function About() {
             </div>
 
             <ImageFrame
-              src="/images/about/hero.jpeg"
+              src="/images/about/AkhirSpeech1.jpeg"
               alt="Akhir"
               aspect="aspect-[16/10]"
               className="[&>img]:object-[center_35%]"
